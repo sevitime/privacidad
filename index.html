@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad — SeviTime</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f0f13;
+      color: #e0e0e0;
+      line-height: 1.7;
+    }
+    header {
+      background: #00897B;
+      padding: 40px 24px 32px;
+      text-align: center;
+    }
+    header h1 { font-size: 26px; font-weight: 700; color: #fff; }
+    header p  { font-size: 14px; color: rgba(255,255,255,0.75); margin-top: 6px; }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #00BFA5;
+      margin: 36px 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #1e1e2e;
+    }
+    p { margin-bottom: 12px; font-size: 15px; color: #ccc; }
+    ul { margin: 8px 0 12px 20px; }
+    li { font-size: 15px; color: #ccc; margin-bottom: 6px; }
+    .badge {
+      display: inline-block;
+      background: #1e1e2e;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 3px 10px;
+      font-size: 13px;
+      color: #aaa;
+      margin-bottom: 4px;
+    }
+    .highlight {
+      background: #1a2a28;
+      border-left: 3px solid #00897B;
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+      font-size: 14px;
+      color: #aaa;
+    }
+    a { color: #00BFA5; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: #555;
+      border-top: 1px solid #1e1e2e;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Política de Privacidad</h1>
+  <p>SeviTime · Última actualización: 3 de mayo de 2026</p>
+</header>
+
+<main>
+
+  <h2>1. Responsable</h2>
+  <p>
+    Esta política de privacidad aplica a la aplicación <strong>SeviTime</strong>
+    (paquete <span class="badge">com.selu.sevitime</span>), desarrollada por
+    <strong>José Luis Torres L.</strong> Puedes contactar en
+    <a href="mailto:sevitimeapp@gmail.com">sevitimeapp@gmail.com</a>.
+  </p>
+
+  <h2>2. Datos que NO recogemos</h2>
+  <p>SeviTime <strong>no recoge</strong> nombre, apellidos, correo electrónico,
+  número de teléfono, contraseña, datos de pago ni ningún otro dato que permita
+  identificarte personalmente. No existe registro de cuenta.</p>
+
+  <h2>3. Permisos del dispositivo</h2>
+  <ul>
+    <li>
+      <strong>Ubicación (opcional):</strong> se usa exclusivamente en sesión para
+      mostrar lugares cercanos y el tiempo de tu zona. No se almacena en ningún
+      servidor ni se comparte con terceros.
+    </li>
+    <li>
+      <strong>Internet:</strong> necesario para cargar datos de tiempo, lugares,
+      eventos y sincronizar favoritos.
+    </li>
+  </ul>
+
+  <h2>4. Almacenamiento local</h2>
+  <p>La app guarda en tu dispositivo (SharedPreferences), sin enviarlo a ningún servidor:</p>
+  <ul>
+    <li>Caché de clima, lugares y eventos (para uso sin conexión)</li>
+    <li>Preferencias: tema visual, tamaño de fuente</li>
+    <li>Historial de búsquedas recientes</li>
+    <li>Valoraciones de lugares que has puntuado</li>
+    <li>Un identificador anónimo de dispositivo (UUID generado aleatoriamente)</li>
+  </ul>
+  <div class="highlight">
+    Estos datos se eliminan al desinstalar la aplicación.
+  </div>
+
+  <h2>5. Datos enviados a nuestros servidores (Supabase)</h2>
+  <p>SeviTime usa <strong>Supabase</strong> (servidores en la UE, región París) para:</p>
+  <ul>
+    <li>
+      <strong>Favoritos sincronizados:</strong> el UUID anónimo de tu dispositivo
+      junto con los nombres de los lugares que marcas como favoritos. Esto permite
+      recuperar tus favoritos si reinstales la app. El UUID no puede vincularse a
+      tu identidad real.
+    </li>
+    <li>
+      <strong>Valoraciones globales:</strong> la puntuación que asignas a un lugar
+      se suma a la media global. No se asocia al UUID ni a ningún identificador personal.
+    </li>
+    <li>
+      <strong>Datos de uso anónimos:</strong> registramos qué pantallas se visitan,
+      qué términos se buscan y qué categorías se consultan, sin ningún identificador
+      de usuario. Estos datos agregados se usan exclusivamente para mejorar la app.
+    </li>
+  </ul>
+
+  <h2>6. Servicios de terceros</h2>
+  <ul>
+    <li><strong>Open-Meteo</strong> — tiempo y calidad del aire. Recibe tus coordenadas GPS para devolver la previsión local. <a href="https://open-meteo.com/en/terms" target="_blank">Términos</a></li>
+    <li><strong>OpenStreetMap / Overpass API</strong> — lugares cercanos. Recibe tus coordenadas. <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank">Política de privacidad</a></li>
+    <li><strong>Wikipedia API</strong> — efeméride del día. No envía datos del usuario.</li>
+    <li><strong>Datos Abiertos Junta de Andalucía</strong> — agenda cultural. No envía datos del usuario.</li>
+    <li><strong>Ayuntamiento de Sevilla / OnSevilla</strong> — eventos locales vía RSS. No envía datos del usuario.</li>
+    <li><strong>Google Fonts</strong> — tipografía. Puede realizar peticiones a servidores de Google. <a href="https://policies.google.com/privacy" target="_blank">Política de privacidad</a></li>
+    <li><strong>footballwebpages.co.uk</strong> — calendarios de fútbol. No envía datos del usuario.</li>
+  </ul>
+
+  <h2>7. Base legal (RGPD)</h2>
+  <p>
+    Los datos de uso anónimos se tratan al amparo del <strong>interés legítimo</strong>
+    del desarrollador para mejorar la aplicación (art. 6.1.f RGPD). Al no contener
+    dato personal alguno, los datos estadísticos anónimos quedan fuera del ámbito
+    de aplicación del RGPD conforme al Considerando 26.
+  </p>
+  <p>
+    La sincronización de favoritos mediante UUID anónimo se realiza con tu
+    <strong>consentimiento implícito</strong> al usar la funcionalidad de favoritos,
+    y puede eliminarse desinstalando la app.
+  </p>
+
+  <h2>8. Tus derechos</h2>
+  <p>Puedes ejercer tus derechos de acceso, rectificación, supresión y portabilidad
+  escribiendo a <a href="mailto:sevitimeapp@gmail.com">sevitimeapp@gmail.com</a>.
+  Para eliminar tus favoritos del servidor, basta con desinstalar la app o
+  contactarnos indicando tu UUID (visible bajo petición).</p>
+
+  <h2>9. Menores</h2>
+  <p>SeviTime no está dirigida a menores de 14 años. No recogemos conscientemente
+  datos de menores.</p>
+
+  <h2>10. Cambios en esta política</h2>
+  <p>Cualquier cambio relevante se notificará mediante la actualización de la fecha
+  al inicio de este documento. Te recomendamos revisarla periódicamente.</p>
+
+</main>
+
+<footer>
+  SeviTime &copy; 2026 · <a href="mailto:sevitimeapp@gmail.com">sevitimeapp@gmail.com</a>
+</footer>
+
+</body>
+</html>
