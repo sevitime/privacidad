@@ -68,7 +68,7 @@
 
 <header>
   <h1>Política de Privacidad</h1>
-  <p>SeviTime · Última actualización: 3 de mayo de 2026</p>
+  <p>SeviTime · Última actualización: 13 de agosto de 2026</p>
 </header>
 
 <main>
@@ -81,10 +81,13 @@
     <a href="mailto:sevitimeapp@gmail.com">sevitimeapp@gmail.com</a>.
   </p>
 
-  <h2>2. Datos que NO recogemos</h2>
-  <p>SeviTime <strong>no recoge</strong> nombre, apellidos, correo electrónico,
-  número de teléfono, contraseña, datos de pago ni ningún otro dato que permita
-  identificarte personalmente. No existe registro de cuenta.</p>
+  <h2>2. Datos personales</h2>
+  <p>SeviTime funciona <strong>sin necesidad de crear una cuenta</strong>: puedes
+  usar toda la app de forma anónima y no recogemos nombre, correo ni teléfono.</p>
+  <p>Opcionalmente, puedes <strong>iniciar sesión con Google</strong>. En ese caso
+  guardamos tu nombre, dirección de correo electrónico y foto de perfil para
+  sincronizar favoritos, pendientes, visitados y valoraciones entre dispositivos.
+  Puedes cerrar sesión o borrar tus datos cuando quieras desde Ajustes.</p>
 
   <h2>3. Permisos del dispositivo</h2>
   <ul>
@@ -96,6 +99,10 @@
     <li>
       <strong>Internet:</strong> necesario para cargar datos de tiempo, lugares,
       eventos y sincronizar favoritos.
+    </li>
+    <li>
+      <strong>Notificaciones (opcional):</strong> se usan para enviarte la efeméride
+      diaria, el lugar destacado y avisos de partidos. Puedes desactivarlas desde Ajustes.
     </li>
   </ul>
 
@@ -113,22 +120,31 @@
   </div>
 
   <h2>5. Datos enviados a nuestros servidores (Supabase)</h2>
-  <p>SeviTime usa <strong>Supabase</strong> (servidores en la UE, región París) para:</p>
+  <p>SeviTime usa <strong>Supabase</strong> para sincronizar tus datos y mejorar la app:</p>
   <ul>
     <li>
-      <strong>Favoritos sincronizados:</strong> el UUID anónimo de tu dispositivo
-      junto con los nombres de los lugares que marcas como favoritos. Esto permite
-      recuperar tus favoritos si reinstales la app. El UUID no puede vincularse a
-      tu identidad real.
+      <strong>Favoritos, pendientes y visitados:</strong> se sincronizan usando tu
+      cuenta de Google (si has iniciado sesión) o, en su defecto, un identificador
+      anónimo de dispositivo (UUID). El UUID no puede vincularse a tu identidad real.
     </li>
     <li>
-      <strong>Valoraciones globales:</strong> la puntuación que asignas a un lugar
-      se suma a la media global. No se asocia al UUID ni a ningún identificador personal.
+      <strong>Valoraciones:</strong> la puntuación que asignas a un lugar se suma a la
+      media global. Si has iniciado sesión se asocia a tu cuenta de Google; si no, a
+      un UUID anónimo.
+    </li>
+    <li>
+      <strong>Reportes de lugares:</strong> cuando avisas de que un sitio está cerrado
+      o ya no existe, guardamos el nombre del lugar, el motivo y tus coordenadas
+      aproximadas (junto con el UUID anónimo) para mantener el mapa actualizado.
+    </li>
+    <li>
+      <strong>Sugerencias de lugares:</strong> al sugerir un sitio, guardamos el
+      nombre, tipo, coordenadas y notas que envías.
     </li>
     <li>
       <strong>Datos de uso anónimos:</strong> registramos qué pantallas se visitan,
-      qué términos se buscan y qué categorías se consultan, sin ningún identificador
-      de usuario. Estos datos agregados se usan exclusivamente para mejorar la app.
+      qué términos se buscan y qué categorías se consultan, sin identificador de
+      usuario. Se usan exclusivamente para mejorar la app.
     </li>
   </ul>
 
@@ -141,6 +157,8 @@
     <li><strong>Ayuntamiento de Sevilla / OnSevilla</strong> — eventos locales vía RSS. No envía datos del usuario.</li>
     <li><strong>Google Fonts</strong> — tipografía. Puede realizar peticiones a servidores de Google. <a href="https://policies.google.com/privacy" target="_blank">Política de privacidad</a></li>
     <li><strong>footballwebpages.co.uk</strong> — calendarios de fútbol. No envía datos del usuario.</li>
+    <li><strong>Google (inicio de sesión)</strong> — si inicias sesión con Google, usas la autenticación de Google. <a href="https://policies.google.com/privacy" target="_blank">Política de privacidad</a></li>
+    <li><strong>Sentry</strong> — monitorización de errores para detectar y corregir fallos. Puede registrar información técnica del dispositivo (modelo, versión del sistema). <a href="https://sentry.io/privacy/" target="_blank">Política de privacidad</a></li>
   </ul>
 
   <h2>7. Base legal (RGPD)</h2>
@@ -155,12 +173,18 @@
     <strong>consentimiento implícito</strong> al usar la funcionalidad de favoritos,
     y puede eliminarse desinstalando la app.
   </p>
+  <p>
+    Los datos asociados a tu cuenta de Google se tratan con tu
+    <strong>consentimiento</strong> al iniciar sesión (art. 6.1.a RGPD) y se eliminan
+    al cerrar sesión o borrar tu cuenta desde la app.
+  </p>
 
   <h2>8. Tus derechos</h2>
   <p>Puedes ejercer tus derechos de acceso, rectificación, supresión y portabilidad
   escribiendo a <a href="mailto:sevitimeapp@gmail.com">sevitimeapp@gmail.com</a>.
-  Para eliminar tus favoritos del servidor, basta con desinstalar la app o
-  contactarnos indicando tu UUID (visible bajo petición).</p>
+  Si has iniciado sesión, puedes cerrar sesión o borrar tu cuenta y sus datos desde
+  Ajustes. Si usas la app de forma anónima, basta con desinstalarla o contactarnos
+  indicando tu UUID (visible bajo petición).</p>
 
   <h2>9. Menores</h2>
   <p>SeviTime no está dirigida a menores de 14 años. No recogemos conscientemente
