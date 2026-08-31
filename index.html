@@ -68,7 +68,7 @@
 
 <header>
   <h1>Política de Privacidad</h1>
-  <p>SeviTime · Última actualización: 13 de agosto de 2026</p>
+  <p>SeviTime · Última actualización: 31 de agosto de 2026</p>
 </header>
 
 <main>
@@ -129,17 +129,20 @@
     </li>
     <li>
       <strong>Valoraciones:</strong> la puntuación que asignas a un lugar se suma a la
-      media global. Si has iniciado sesión se asocia a tu cuenta de Google; si no, a
-      un UUID anónimo.
+      media global. Solo puedes valorar si has iniciado sesión con Google, y la
+      valoración queda asociada a tu cuenta.
     </li>
     <li>
-      <strong>Reportes de lugares:</strong> cuando avisas de que un sitio está cerrado
-      o ya no existe, guardamos el nombre del lugar, el motivo y tus coordenadas
-      aproximadas (junto con el UUID anónimo) para mantener el mapa actualizado.
+      <strong>Reportes de lugares:</strong> para evitar spam, reportar un sitio
+      requiere haber iniciado sesión con Google. Aun así, el reporte en sí (nombre
+      del lugar, el motivo y tus coordenadas aproximadas) se guarda con el UUID
+      anónimo del dispositivo, no vinculado a tu cuenta.
     </li>
     <li>
-      <strong>Sugerencias de lugares:</strong> al sugerir un sitio, guardamos el
-      nombre, tipo, coordenadas y notas que envías.
+      <strong>Sugerencias de lugares:</strong> por el mismo motivo antispam, sugerir
+      un sitio nuevo también requiere sesión iniciada con Google. El contenido que
+      envías (nombre, tipo, coordenadas y notas) se guarda igualmente con el UUID
+      anónimo del dispositivo, no con tu cuenta.
     </li>
     <li>
       <strong>Datos de uso anónimos:</strong> registramos qué pantallas se visitan,
@@ -161,7 +164,42 @@
     <li><strong>Sentry</strong> — monitorización de errores para detectar y corregir fallos. Puede registrar información técnica del dispositivo (modelo, versión del sistema). <a href="https://sentry.io/privacy/" target="_blank">Política de privacidad</a></li>
   </ul>
 
-  <h2>7. Base legal (RGPD)</h2>
+  <h2>7. Fotos que envías</h2>
+  <p>
+    Puedes adjuntar una foto al aportar los datos de un sitio, al avisar de que
+    la que aparece no es de ese lugar, al reportar un problema o al escribir una
+    reseña. Es siempre opcional: todo lo demás funciona sin ella.
+  </p>
+  <p>
+    <strong>Qué hacemos con ella.</strong> Las revisamos a mano antes de
+    publicar nada. Si la foto es buena, puede pasar a ser la imagen con la que
+    ese sitio aparece en la app, y en ese caso la verá cualquiera que lo
+    consulte. Al enviarla nos das permiso para usarla con esa finalidad. Las
+    fotos de las reseñas se publican junto a la reseña una vez aprobada.
+  </p>
+  <p>
+    <strong>Sigue siendo tuya.</strong> No cedes la propiedad de la foto ni
+    renuncias a nada: nos autorizas a mostrarla dentro de SeviTime, y puedes
+    pedirnos que la retiremos cuando quieras escribiendo a
+    <a href="mailto:sevitimeapp@gmail.com">sevitimeapp@gmail.com</a>. Tampoco la
+    publicamos en otros servicios: cuando enviamos un aviso a OpenStreetMap
+    incluimos el enlace a la foto para que quien mantiene el mapa pueda
+    comprobar el dato, pero no la subimos allí ni a Wikimedia Commons, porque
+    eso exigiría una cesión bajo licencia libre que no te pedimos.
+  </p>
+  <div class="highlight">
+    No subas fotos en las que se reconozca a personas, matrículas o el interior
+    de una vivienda. Tu permiso no cubre a quien salga en ellas, y esas fotos
+    las descartamos.
+  </div>
+  <p>
+    Las fotos se guardan en Supabase (bucket <code>sugerencias-fotos</code>),
+    asociadas al identificador anónimo del dispositivo, no a tu nombre. Las
+    publicadas no llevan crédito de autor, precisamente para no publicar datos
+    de quien las envía.
+  </p>
+
+  <h2>8. Base legal (RGPD)</h2>
   <p>
     Los datos de uso anónimos se tratan al amparo del <strong>interés legítimo</strong>
     del desarrollador para mejorar la aplicación (art. 6.1.f RGPD). Al no contener
@@ -178,19 +216,24 @@
     <strong>consentimiento</strong> al iniciar sesión (art. 6.1.a RGPD) y se eliminan
     al cerrar sesión o borrar tu cuenta desde la app.
   </p>
+  <p>
+    Las fotos que envías se tratan con tu <strong>consentimiento</strong>
+    (art. 6.1.a RGPD), que das al enviarlas después de que la app te explique,
+    en ese mismo momento, que pueden acabar publicadas como imagen del sitio.
+  </p>
 
-  <h2>8. Tus derechos</h2>
+  <h2>9. Tus derechos</h2>
   <p>Puedes ejercer tus derechos de acceso, rectificación, supresión y portabilidad
   escribiendo a <a href="mailto:sevitimeapp@gmail.com">sevitimeapp@gmail.com</a>.
   Si has iniciado sesión, puedes cerrar sesión o borrar tu cuenta y sus datos desde
   Ajustes. Si usas la app de forma anónima, basta con desinstalarla o contactarnos
   indicando tu UUID (visible bajo petición).</p>
 
-  <h2>9. Menores</h2>
+  <h2>10. Menores</h2>
   <p>SeviTime no está dirigida a menores de 14 años. No recogemos conscientemente
   datos de menores.</p>
 
-  <h2>10. Cambios en esta política</h2>
+  <h2>11. Cambios en esta política</h2>
   <p>Cualquier cambio relevante se notificará mediante la actualización de la fecha
   al inicio de este documento. Te recomendamos revisarla periódicamente.</p>
 
