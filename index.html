@@ -19,6 +19,10 @@
     }
     header h1 { font-size: 26px; font-weight: 700; color: #fff; }
     header p  { font-size: 14px; color: rgba(255,255,255,0.75); margin-top: 6px; }
+    /* Dentro de la app, la pantalla ya lleva el título en su cabecera. */
+    .en-app header { padding: 16px 24px; }
+    .en-app header h1 { display: none; }
+    .en-app header p { margin-top: 0; }
     main {
       max-width: 720px;
       margin: 0 auto;
@@ -63,12 +67,17 @@
       border-top: 1px solid #1e1e2e;
     }
   </style>
+  <script>
+    if (new URLSearchParams(location.search).has('app')) {
+      document.documentElement.classList.add('en-app');
+    }
+  </script>
 </head>
 <body>
 
 <header>
   <h1>Política de Privacidad</h1>
-  <p>SeviTime · Última actualización: 15 de septiembre de 2026 (datos de uso del primer día)</p>
+  <p>SeviTime · Última actualización: 17 de septiembre de 2026 (sugerir un sitio en el mapa, fotos en las rutas y servicios de terceros)</p>
 </header>
 
 <main>
@@ -133,16 +142,29 @@
       valoración queda asociada a tu cuenta.
     </li>
     <li>
-      <strong>Reportes de lugares:</strong> para evitar spam, reportar un sitio
-      requiere haber iniciado sesión con Google. Aun así, el reporte en sí (nombre
-      del lugar, el motivo y tus coordenadas aproximadas) se guarda con el UUID
-      anónimo del dispositivo, no vinculado a tu cuenta.
+      <strong>Avisos sobre un sitio:</strong> para evitar spam, avisar de que un
+      sitio ha cerrado, ha cambiado de nombre o tiene datos mal requiere haber
+      iniciado sesión con Google. El aviso (el sitio, el motivo, lo que escribes
+      y la foto si la adjuntas) se guarda con tu cuenta, para poder contarte en
+      el buzón en qué quedó y darte los puntos si se aprueba.
     </li>
     <li>
-      <strong>Sugerencias de lugares:</strong> por el mismo motivo antispam, sugerir
-      un sitio nuevo también requiere sesión iniciada con Google. El contenido que
-      envías (nombre, tipo, coordenadas y notas) se guarda igualmente con el UUID
-      anónimo del dispositivo, no con tu cuenta.
+      <strong>Sugerencias de lugares:</strong> por el mismo motivo, sugerir un
+      sitio nuevo también requiere sesión iniciada con Google, y se guarda con tu
+      cuenta. Guardamos el nombre, el tipo, si pone tapas, las notas, la foto si
+      la adjuntas y dónde está. Para situarlo puedes usar tu ubicación (y
+      entonces guardamos las coordenadas del GPS, su precisión y la hora en que
+      se tomaron) o marcarlo en el mapa (y entonces guardamos el punto que
+      marcas y lo que escribiste en el buscador para llegar hasta él). Si se
+      aprueba, el sitio aparece en la app y enviamos un aviso a OpenStreetMap
+      con su nombre y su ubicación, nunca con tu nombre ni tu cuenta.
+    </li>
+    <li>
+      <strong>Reseñas y rutas:</strong> las reseñas que escribes y las rutas que
+      creas, con sus notas y sus fotos, se revisan a mano y, si se aprueban, se
+      publican con tu nombre público (el apodo que elijas en tu perfil). Puedes
+      editarlas o borrarlas cuando quieras; al borrar tu cuenta se borran con
+      ella.
     </li>
     <li>
       <strong>Buzón:</strong> cuando revisamos algo que has mandado (una reseña,
@@ -187,7 +209,15 @@
   <h2>6. Servicios de terceros</h2>
   <ul>
     <li><strong>Open-Meteo</strong> — tiempo y calidad del aire. Recibe tus coordenadas GPS para devolver la previsión local. <a href="https://open-meteo.com/en/terms" target="_blank">Términos</a></li>
-    <li><strong>OpenStreetMap / Overpass API</strong> — lugares cercanos. Recibe tus coordenadas. <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank">Política de privacidad</a></li>
+    <li><strong>OpenStreetMap / Overpass API</strong> — lugares cercanos y búsqueda de sitios cuando no hay datos en el móvil. Recibe tus coordenadas. <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank">Política de privacidad</a></li>
+    <li><strong>OpenStreetMap / Nominatim</strong> — buscador de direcciones al marcar un sitio en el mapa. Recibe el texto que escribes en ese buscador, pero no tu ubicación. <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank">Política de privacidad</a></li>
+    <li><strong>MapTiler y OpenStreetMap (mapas)</strong> — las imágenes del mapa. Reciben la zona del mapa que estás mirando. <a href="https://www.maptiler.com/privacy-policy/" target="_blank">Política de privacidad de MapTiler</a></li>
+    <li><strong>Wikimedia Commons y Wikidata</strong> — fotos y datos de los sitios. Reciben el nombre y la posición del sitio que consultas, no la tuya. <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy" target="_blank">Política de privacidad</a></li>
+    <li><strong>Tussam y Metro de Sevilla (ArcGIS)</strong> — paradas y estaciones cercanas. Pueden recibir tu ubicación aproximada para buscar las que tienes cerca.</li>
+    <li><strong>Consorcio de Transporte Metropolitano de Sevilla (api.ctan.es)</strong> — autobuses interurbanos. No envía datos del usuario.</li>
+    <li><strong>CityBikes</strong> — estaciones de Sevici. No envía datos del usuario.</li>
+    <li><strong>YouTube</strong> — miniaturas de los vídeos de algunos sitios. No envía datos del usuario más allá de la propia petición de la imagen.</li>
+    <li><strong>Firebase Cloud Messaging (Google)</strong> — avisos push, si los aceptas. Recibe un identificador del dispositivo para poder entregarlos. <a href="https://policies.google.com/privacy" target="_blank">Política de privacidad</a></li>
     <li><strong>Wikipedia API</strong> — efeméride del día. No envía datos del usuario.</li>
     <li><strong>Datos Abiertos Junta de Andalucía</strong> — agenda cultural. No envía datos del usuario.</li>
     <li><strong>Ayuntamiento de Sevilla / OnSevilla</strong> — eventos locales vía RSS. No envía datos del usuario.</li>
@@ -199,16 +229,18 @@
 
   <h2>7. Fotos que envías</h2>
   <p>
-    Puedes adjuntar una foto al aportar los datos de un sitio, al avisar de que
-    la que aparece no es de ese lugar, al reportar un problema o al escribir una
-    reseña. Es siempre opcional: todo lo demás funciona sin ella.
+    Puedes adjuntar una foto al sugerir un sitio o aportar sus datos, al avisar
+    de que la que aparece no es de ese lugar, al reportar un problema, al
+    escribir una reseña o en cada parada de una ruta. Es siempre opcional: todo
+    lo demás funciona sin ella.
   </p>
   <p>
     <strong>Qué hacemos con ella.</strong> Las revisamos a mano antes de
     publicar nada. Si la foto es buena, puede pasar a ser la imagen con la que
     ese sitio aparece en la app, y en ese caso la verá cualquiera que lo
     consulte. Al enviarla nos das permiso para usarla con esa finalidad. Las
-    fotos de las reseñas se publican junto a la reseña una vez aprobada.
+    fotos de las reseñas y de las paradas de una ruta se publican junto a la
+    reseña o la ruta una vez aprobadas.
   </p>
   <p>
     <strong>Sigue siendo tuya.</strong> No cedes la propiedad de la foto ni
@@ -226,10 +258,13 @@
     las descartamos.
   </div>
   <p>
-    Las fotos se guardan en Supabase (bucket <code>sugerencias-fotos</code>),
-    asociadas al identificador anónimo del dispositivo, no a tu nombre. Las
-    publicadas no llevan crédito de autor, precisamente para no publicar datos
-    de quien las envía.
+    Las fotos se guardan en Supabase (bucket <code>sugerencias-fotos</code>), en
+    una carpeta con el identificador de tu cuenta, y se borran al eliminarla,
+    salvo las que ya ilustran la ficha de un sitio (ver
+    <a href="borrar-cuenta.html">qué se borra al eliminar la cuenta</a>).
+    Las de reseñas y rutas se ven con tu nombre público, igual que la reseña o
+    la ruta. Las que pasan a ser la imagen de un sitio no llevan crédito de
+    autor, para no publicar datos de quien las envía.
   </p>
 
   <h2>8. Base legal (RGPD)</h2>
